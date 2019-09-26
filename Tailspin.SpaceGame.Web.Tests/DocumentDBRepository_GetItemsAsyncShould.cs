@@ -42,7 +42,7 @@ namespace Tests
             Task<IEnumerable<Score>> scoresTask = _scoreRepository.GetItemsAsync(
                 queryPredicate, // the predicate defined above
                 score => 1, // we don't care about the order
-                PAGE,
+                (PAGE - 1),
                 MAX_RESULTS
             );
             IEnumerable<Score> scores = scoresTask.Result;
