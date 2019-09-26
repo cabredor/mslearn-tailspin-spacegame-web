@@ -100,7 +100,7 @@ steps:
       eq(variables['System.PullRequest.TargetBranch'], 'master')
     )
 
-- task: PublishCodeCoverageResults@1
+- task: PublishCodeCoverageResults@16
   displayName: 'Publish code coverage report'
   inputs:
     codeCoverageTool: 'cobertura'
